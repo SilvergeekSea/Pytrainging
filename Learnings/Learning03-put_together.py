@@ -9,8 +9,8 @@ req.getproxies()
 
 #user your credentials and url to authenticate
 
-os.environ['http_proxy'] = "http://schen33:@proxy.cmltd.net.au:8080"
-os.environ['https_proxy'] = "https://schen33:@proxy.cmltd.net.au:8080"
+os.environ['http_proxy'] = "http://"
+os.environ['https_proxy'] = "https://"
 from urllib.request import urlopen
 story = urlopen('http://sixty-north.com/c/t.txt')
 story_words = []
