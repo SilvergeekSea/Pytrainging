@@ -10,6 +10,8 @@ print (f'urls["Google"] is {urls["Google"]}')
 # value object however may be mutable or immutable.
 # Do NOT rely on the order of dictionary essentially its a random order.
 
+# use dict.get(key) which returns the value or None if the key is not present (or get(key, not-found) allows you to specify what value to return in the not-found case).
+
 # convert tuple object to dictionary.
 names_and_ages = [('Alice',32),('Bob',48),('Charlie',28),('Daniel',33)]
 d = dict(names_and_ages)
