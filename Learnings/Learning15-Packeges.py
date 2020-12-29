@@ -114,5 +114,7 @@ __all__ can be useful to limited which name of attributes will be exposed to pub
 
 
 
+use python -m pip freeze > requirement.txt
+pythong -m pip install -r requirement.txt
 """
 
