@@ -1,5 +1,6 @@
 {
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "python.linting.pydocstyleEnabled": false
+    "python.linting.pydocstyleEnabled": false,
+    "python.formatting.autopep8Path": "C:\\Users\\schen33\\OneDrive - Coles Supermarkets Pty Ltd\\Scripts\\Github\\Pytrainging\\virtualenvs\\rates\\Lib\\site-packages\\pep8-1.7.1.dist-info",
 }

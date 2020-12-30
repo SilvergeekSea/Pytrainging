@@ -116,5 +116,45 @@ __all__ can be useful to limited which name of attributes will be exposed to pub
 
 use python -m pip freeze > requirement.txt
 pythong -m pip install -r requirement.txt
+
+python -m pip install flask==0.9
+python -m pip install 'Django<2.0' (notice it has quote )
+
+if you want to install project with setup.py with in the project
+you may download project from github and run
+python -m pip install -e flask (this flask is a folder, not fetch from Interenet as module)
+
+python -m pip show flask
+
+
+pip install --proxy=127.0.0.1:9000 -U virtualenvwrapper-win --trusted-host=pypi.org --trusted-host=files.pythonhosted.org
+
+the default location of environment is
+%USERPROFILE%\Envs
+
+workon
+workon projectname
+deactivate
+
+create a project and a virtualenv and bind them
+myproject new_proj
+myproject -p python3 new_proj
+
+# Bind an existing project to a virtualenv
+# Binds active venv to current working dir
+setvirtualenvproject
+
+export WORKON_HOME="/home/rj/envs" # Optional, no space
+export PROJECT_HOME="/home/rj/dev" # Needed for mkproject, no space
+
+Configuration
+configure location of venvs and projects
+by setting environment variables in .profile
+WORKON_HOME="/home/rj/envs"
+PROJECT_HOME="/home/rj/dev"
+
+
+
+
 """
 

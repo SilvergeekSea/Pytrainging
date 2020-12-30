@@ -4,5 +4,7 @@
 			"path": ".."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"python.linting.pylintPath": "C:\\Users\\schen33\\OneDrive - Coles Supermarkets Pty Ltd\\Scripts\\Github\\Pytrainging\\virtualenvs\\rates\\Lib\\site-packages\\pylint"
+	}
 }
