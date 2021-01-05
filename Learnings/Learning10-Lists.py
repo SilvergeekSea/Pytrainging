@@ -2,7 +2,7 @@
 r = [1,3,4,5,-16]
 print (f'last item is {r[-1]},2nd last item is {r[-2]}')
 
-# Slicing is very important. It is extended form of indexing for referring to a portion of a list or other sequence.
+# Slicing is very important. It is extended form of indexing for referring to a portion of a list or other sequence. 
 # syntax: a_list[start:stop]
 # remove first and last , use s[1:-1]
 s = [1,2,3,4,5]
@@ -22,15 +22,15 @@ print (f't is s: {t is s}')
 r = s[:]
 print (f'r is s: {r is s}')
 print (f'r == s: {r == s}')
-# be aware the r content (each member) is still pointing same memory as s member.
+# be aware the r content (each member) is still pointing same memory as s member. 
 u = s.copy()
 print (f'u is s: {u is s}')
 print (f'u == s: {u == s}')
 # or you can do this
-v = list(s)
+v = list(s) 
 
 # all those techniques perform a shallow copy (copy links or pointers, not the value)
-# the new list contains same object references as source, but not value.
+# the new list contains same object references as source, but not value. 
 a = [[1,2],[3,4]]
 b = a[:]
 print (f'a is b: {a is b}')
@@ -50,7 +50,7 @@ print (f'a[1] is b[1]: {a[1] is b[1]}')
 print (f'a[1] == b[1]: {a[1] == b[1]}')
 print (f'b[1] is {b[1]}')
 
-# You can also do multiplication
+# You can also do multiplication 
 c = [2,4]
 d = c * 2
 print (f'd is : {d}')
@@ -121,8 +121,5 @@ print (f'y is : {y}')
 q = reversed(x) # only iterator, not new list.
 y = list(q)
 print (f'y is : {y}')
-
-def silvertest():
- print "hello"
 
 

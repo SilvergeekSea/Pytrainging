@@ -10,7 +10,7 @@ req.getproxies()
 #user your credentials and url to authenticate
 
 os.environ['http_proxy'] = "http://"
-os.environ['https_proxy'] = "https://"
+os.environ['https_proxy'] = ""
 from urllib.request import urlopen
 story = urlopen('http://sixty-north.com/c/t.txt')
 story_words = []
@@ -22,7 +22,6 @@ for line in story:
 story.close()
 print (f'storty_words is {story_words}')
 print (story)
-print story_words
 
 
 
