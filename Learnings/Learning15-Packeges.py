@@ -155,6 +155,65 @@ PROJECT_HOME="/home/rj/dev"
 
 
 
+Namespace packages may not have __init__.py
+eg: import food
+Sequence how package was loaded
+- scan each directory in sys.path
+- import standard package if found (which loads __init__.py)
+- import standard module if found (which loads directory module name from import argument)
+- Otherwise, keep look for directory named "food", then all matching directories found acting
+  as part of namespace package.
+
+so we will put modules of demo_reader into different folders but with same parent folder name(demo_reader)
+
+we can use
+import sys
+sys.path.extend(['./path1','./path2']) (just to extend the list content)
+you can use demo_reader.__path__
+You should be able to see it will import different modules from different path.
+you can use
+demo_reader.util.__path__ and demo_reader.compressed.__path__ to confirm the modules are coming from
+    different path.
+
+
+Executable Directories
+    It let you specify the main entry point when directory is executed by Python.
+    You can put your Python modules under a parent folder. Then you need to create __main__.py
+    __main__.py will be executed when you run
+    py parent_folder_name
+    so if you load module,you will need to load __init__.py. but if you run python xxx
+    it will load __main__.py with in that folder.
+    You can put modules names in the __main__.py to initlize the module.
+    You can add parent folder into sys.path so the program(the folder name) can be executed.
+
+Executable Zip Files
+Python knows how to execute zip file and treat them like a directory.
+get into the folder and load module zipfile
+py -m zipfile -c ../multi-reader-program.zip *
+zip file should contain content of directory but not directory itself.
+python -m zipfile -c  ../multi-reader-program.zip ./
+
+if you put __main__.py under package directory, python will be able execute the package.
+
+difference between executing directory vs Packages.
+Python directory (no -m).
+directory will be added to sys.path.extend(['./newpath']). but this is not the directory which contains
+demo_reader module itself (parent folder.)
+then it loads __main__.py. However, __main__.py requires demo_reader but that demo_reader
+is not a subfolder of parent folders which included in sys.path.
+
+
+python -m directory (with -m)
+Executing a package.
+
+Python treat current directory as package. It will import current directory content to memory as
+module instead of providing a path for scan to look for demo_reader. (you can't find it as
+there is no demo_reader folder there. )
+
+__init__.py vs __main__.py
+__init__.py is when package is imported as module.
+__main__.py is only for execution. python demo_reader
+__init__.py is only for import. python -m demo_reader
 
 """
 
