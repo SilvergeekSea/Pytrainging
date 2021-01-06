@@ -7,7 +7,7 @@ from meetings.models import Meeting,Room
 # Create your views here.
 def welcome(request):
     return render(request, "website/welcome.html",
-                {"num_meetings": Meeting.objects.count()})
+                {"meetings": Meeting.objects.all()})
 
 def date(request):
     return HttpResponse("This page was servered at in Australia " + str(datetime.now()))
